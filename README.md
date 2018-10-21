@@ -23,7 +23,11 @@ After that, just run
                           sh training_fre.sh
                          ```
 ## Inference
+To get the edge maps, one should changes some path and runs:
 
+                          ``` 
+                          sh testing_fre.sh
+                         ```
 ## Citations
 If you used dataset mentioned above， please cite the following papers:
 ```
