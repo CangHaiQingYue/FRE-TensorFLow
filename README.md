@@ -33,7 +33,7 @@ If you used dataset mentioned above， please cite the following papers:
 ```
 @inproceedings{
   title={Edge Detection with Feature Re-extraction Deep Convolutional Neural Network},
-  author={Changbao Wena, Pengli Liua, Wenbo Maa, Zhirong Jianb, Changheng Lvc, Jitong Honga, Xiaowen Shia},
+  author={Changbao Wen, Pengli Liu, Wenbo Ma, Zhirong Jian, Changheng Lv, Jitong Hong, Xiaowen Shi},
   journal={Journal of Visual Communication and Image Representation},
   year={2018}
 }
