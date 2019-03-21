@@ -1,6 +1,7 @@
-# FRE-TensorFLow
-This is an implementation of FRE(Edge Detection with Feature Re-extraction Deep Convolutional Neural Network)network, which focus on the Edge Detection.<br>
-In this paper, we propose an edge detector based on feature re-extraction (FRE) of a deep convolutional neural network to effectively utilize features extracted from each stage, and design a new loss function. The proposed detector is mainly composed of three modules: backbone, side-output, and feature fusion. The backbone module provides preliminary feature extraction; the side-output module makes network architecture more robustly map features from different stages of the backbone network to edge-pixel space by applying residual learning, and the feature fusion module generates the edge map. Generalization ability on the same distribution is verified using the BSDS500 dataset, achieving optimal dataset scale (ODS) F-score = 0.804. Cross-distribution generalization ability is verified on the NYUDv2 dataset, achieving ODS F- score = 0.701. In addition, we find that freezing backbone network can significantly speed up training process, without much overall accuracy loss (ODS F-score of 0.791 after 5.4k iterations).
+
+# <center>FRE-TensorFLow</center>
+　This is an implementation of FRE(Edge Detection with Feature Re-extraction Deep Convolutional Neural Network)network.
+　In this paper, we propose an edge detector based on feature re-extraction (FRE) of a deep convolutional neural network to effectively utilize features extracted from each stage, and design a new loss function. The proposed detector is mainly composed of three modules: backbone, side-output, and feature fusion. The backbone module provides preliminary feature extraction; the side-output module makes network architecture more robustly map features from different stages of the backbone network to edge-pixel space by applying residual learning, and the feature fusion module generates the edge map. Generalization ability on the same distribution is verified using the BSDS500 dataset, achieving optimal dataset scale (ODS) F-score = 0.804. Cross-distribution generalization ability is verified on the NYUDv2 dataset, achieving ODS F- score = 0.701. In addition, we find that freezing backbone network can significantly speed up training process, without much overall accuracy loss (ODS F-score of 0.791 after 5.4k iterations).
 ## Data Preparation
 The BSDS500 dataset and NYUD dataset are available:
 ```
@@ -14,7 +15,7 @@ To make network easy to training, we should transpose images to TFRecord files.
 To Run
 ```
 cd data_procider
-python image_to_tfreord
+python image_to_tfreord.py
 ```
 ## Training Model
 To run this model, we should change some path in ```data_loader.py   train.py  test.py``` respectively.
@@ -24,10 +25,9 @@ After that, just run
                          ```
 ## Inference
 To get the edge maps, one should changes some path and runs:
-
-                          ``` 
-                          sh testing_fre.sh
-                         ```
+```
+sh testing_fre.sh
+```
 ## Citations
 If you used dataset mentioned above， please cite the following papers:
 ```
@@ -44,6 +44,19 @@ If you used dataset mentioned above， please cite the following papers:
   author={Liu, Yun and Cheng, Ming-Ming and Hu, Xiaowei and Wang, Kai and Bai, Xiang},
   journal={Proceedings of the IEEE conference on computer vision and pattern recognition},
   year={2017}
+}
+```
+```
+@article{WEN201884,
+title = "Edge detection with feature re-extraction deep convolutional neural network",
+journal = "Journal of Visual Communication and Image Representation",
+volume = "57",
+pages = "84 - 90",
+year = "2018",
+issn = "1047-3203",
+doi = "https://doi.org/10.1016/j.jvcir.2018.10.017",
+url = "http://www.sciencedirect.com/science/article/pii/S1047320318302530",
+author = "Changbao Wen and Pengli Liu and Wenbo Ma and Zhirong Jian and Changheng Lv and Jitong Hong and Xiaowen Shi".
 }
 ```
 and 
